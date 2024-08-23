@@ -244,8 +244,10 @@ columns to that table.
 
       setup do |_attributes, options|
         puts '==============>>>>>>>>>>>>>>>>>>>>>>>'
-        puts "#{association_name}: options[:association_name]"
-        puts "#{subclass_name}: options[:subclass_name]"
+        puts "association_name: #{options[:association_name]}"
+        puts "subclass_name: #{options[:subclass_name]}"
+        puts "options: #{options}"
+        puts '==============>>>>>>>>>>>>>>>>>>>>>>>'
         
         association_name = options[:association_name]
         subclass_name    = options[:subclass_name]
