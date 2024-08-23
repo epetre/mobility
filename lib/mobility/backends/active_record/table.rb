@@ -243,6 +243,7 @@ columns to that table.
       end
 
       setup do |_attributes, options|
+        puts '==============>>>>>>>>>>>>>>>>>>>>>>>'
         association_name = options[:association_name]
         subclass_name    = options[:subclass_name]
 
