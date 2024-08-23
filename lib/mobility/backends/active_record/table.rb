@@ -244,6 +244,9 @@ columns to that table.
 
       setup do |_attributes, options|
         puts '==============>>>>>>>>>>>>>>>>>>>>>>>'
+        puts "#{association_name}: options[:association_name]"
+        puts "#{subclass_name}: options[:subclass_name]"
+        
         association_name = options[:association_name]
         subclass_name    = options[:subclass_name]
 
@@ -253,7 +256,6 @@ columns to that table.
           else
             const_set(subclass_name, Class.new(Translation))
           end
-
         translation_class.table_name = options[:table_name]
 
         has_many association_name,
